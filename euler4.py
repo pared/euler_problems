@@ -15,7 +15,6 @@ def biggest_palindrome_for_2_numbers(number_digits_for_each: int) -> (int):
     for i in range(0, number_digits_for_each):
         maxnumber += (10 ** i) * 9
     number1 = maxnumber
-    print (number1)
     while(len(str(number1)) == number_digits_for_each):
         number2 = maxnumber
         while(len(str(number2)) == number_digits_for_each):
@@ -25,6 +24,3 @@ def biggest_palindrome_for_2_numbers(number_digits_for_each: int) -> (int):
         number1 -= 1
     return maxpalindrome
 
-
-numbers = biggest_palindrome_for_2_numbers(3)
-print(numbers)

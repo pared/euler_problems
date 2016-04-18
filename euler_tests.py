@@ -3,6 +3,7 @@ import unittest
 from euler1 import sum_3_5_multipliers_below
 from euler2 import sum_even_fibonacci_below
 from euler4 import is_palindrome, biggest_palindrome_for_2_numbers
+from euler5 import get_factors, list_difference
 
 class Tests(unittest.TestCase):
     def test_euler1(self):
@@ -25,6 +26,14 @@ class Tests(unittest.TestCase):
         self.assertEqual(is_palindrome(99), True)
         self.assertEqual(biggest_palindrome_for_2_numbers(2), 9009)
         self.assertEqual(biggest_palindrome_for_2_numbers(3), 906609)
+
+
+    def test_euler5(self):
+        self.assertEqual(get_factors(4),[2,2])
+        self.assertEqual(get_factors(6),[2,3])
+        self.assertEqual(get_factors(17),[17])
+        self.assertEqual(list_difference([1], [1,1,2,3]), [1,2,3])
+        self.assertEqual(list_difference([1,2,3], [1,1,2,3]), [1])
 
 
 if __name__ == '__main__':
